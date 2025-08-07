@@ -1,14 +1,14 @@
 /**********************************************
-*Ã¿´ÎÉÕÂ¼ĞŞ¸Ä³ÌĞò±àºÅ
-*ProgID: ËÄÎ»±àºÅ Èç2001
-*2ÊÇ¹¦ÄÜ±àºÅ,001Îª¶ÔÓ¦¹¦ÄÜ²úÆ·±àºÅ
-*ËµÃ÷£º
-			1 ¼¼Êõ²âÊÔ³ÌĞò
-			2 Éú²ú³ö³§¼ìÑé³ÌĞò
-			3	Éú²úTPH²âÊÔ³ÌĞò
-			4 Æ·¹Ü³ö³§¼ìÑé³ÌĞò
-			5 Æ·¹ÜTPH²âÊÔ³ÌĞò
-			6	Éú²úÎ¬ĞŞ²âÊÔ³ÌĞò
+*æ¯æ¬¡çƒ§å½•ä¿®æ”¹ç¨‹åºç¼–å·
+*ProgID: å››ä½ç¼–å· å¦‚2001
+*2æ˜¯åŠŸèƒ½ç¼–å·,001ä¸ºå¯¹åº”åŠŸèƒ½äº§å“ç¼–å·
+*è¯´æ˜ï¼š
+			1 æŠ€æœ¯æµ‹è¯•ç¨‹åº
+			2 ç”Ÿäº§å‡ºå‚æ£€éªŒç¨‹åº
+			3	ç”Ÿäº§TPHæµ‹è¯•ç¨‹åº
+			4 å“ç®¡å‡ºå‚æ£€éªŒç¨‹åº
+			5 å“ç®¡TPHæµ‹è¯•ç¨‹åº
+			6	ç”Ÿäº§ç»´ä¿®æµ‹è¯•ç¨‹åº
 **********************************************/
 
 
@@ -30,22 +30,22 @@ void 	ShowNum(u8 d,u8 s,u16 num,u8 len,u8 n,u8 c);
 void Load_Font_Config();
 u32 	num_pow(u8 m,u8 n);
 
-extern	u32					Cap_USART[2];								//¹âñîÅÔÂ·µçÈİ
-extern	u16					Detect_USART[];								//VH,TM,RAY²âÊÔ
-extern	u16					MT_USART[];									//µç»ú²âÊÔ½á¹û
-extern 	u16 				UpStartUSART[];								//Ñ¡ÔñĞÍºÅ²ÎÊıÉèÖÃ
-extern	BitAction		STB_ON,STB_OFF;									//ÓĞÖ½ĞÅºÅ
+extern	u32					Cap_USART[2];								//å…‰è€¦æ—è·¯ç”µå®¹
+extern	u16					Detect_USART[];								//VH,TM,RAYæµ‹è¯•
+extern	u16					MT_USART[];									//ç”µæœºæµ‹è¯•ç»“æœ
+extern 	u16 				UpStartUSART[];								//é€‰æ‹©å‹å·å‚æ•°è®¾ç½®
+extern	BitAction		STB_ON,STB_OFF;									//æœ‰çº¸ä¿¡å·
 extern 	char				*Type_ID;
 extern	u16					It_Num;
-extern	u8					Link_G_en;									//ÊÇ·ñ²âÊÔÍ·Æ¬½ÓµØ
+extern	u8					Link_G_en;									//æ˜¯å¦æµ‹è¯•å¤´ç‰‡æ¥åœ°
 extern	u8					Print_Minloopnum;
 extern	u8					TPH_STB_EN;
 extern FunctionalState  MOTO_H_Set;
 extern char R_Buff[30], R_n, R_Flag,P_n;
-extern u8 P_Buff_Const[300][48]; // ´òÓ¡Í¼ÏñµÄ³£Á¿Êı×é
+extern u8 P_Buff_Const[300][48]; // æ‰“å°å›¾åƒçš„å¸¸é‡æ•°ç»„
 extern volatile FontDimension font_dim;
 
-u16					ADC_Num[3];										//ADC»º´æ
+u16					ADC_Num[3];										//ADCç¼“å­˜
 BitAction		PAPER_Key;
 char 				TPH_Cache[10][24];
 u8 					TPH_LAN_TEST;
@@ -55,65 +55,65 @@ int main(void)
 {
 	u8	ls;
 	u8	lps;
-	InitHardWare();													//MCUÍâÉè³õÊ¼»¯
+	InitHardWare();													//MCUå¤–è®¾åˆå§‹åŒ–
 	if(Key1()	!=	Bit_RESET)
 	{
 		MOTO_H_Set=ENABLE;
 	}	
 	MOTO_HzGet();
-	UpStart();														//ÉèÖÃ»úĞ¾³õÊ¼»¯²ÎÊı
-	//LCD_Init();													//LCD³õÊ¼»¯
-	//LCD_Layout();													//LCDÏÔÊ¾±³¾°²¼¾Ö
+	UpStart();														//è®¾ç½®æœºèŠ¯åˆå§‹åŒ–å‚æ•°
+	//LCD_Init();													//LCDåˆå§‹åŒ–
+	//LCD_Layout();													//LCDæ˜¾ç¤ºèƒŒæ™¯å¸ƒå±€
 	Cap_Test(DISABLE);	
-	nLED_FRONT(Bit_RESET);											//³õÊ¼»¯Íê³ÉÖ¸Ê¾µÆ
+	nLED_FRONT(Bit_RESET);											//åˆå§‹åŒ–å®ŒæˆæŒ‡ç¤ºç¯
 	while(1)
 	{
 Retest:		
-		// if(Key1()	!=	Bit_RESET)							//°´¼ü²âÊÔ
+		// if(Key1()	!=	Bit_RESET)							//æŒ‰é”®æµ‹è¯•
 		if(1)
 		{
 //			Display_Arial_String(232,118,16, "ON ",DARKBLUE,LGRAYBLUE);
-//			Display_GB2312_String(46,170,24, "ÕıÔÚ²âÊÔ²úÆ·£®£®£®",YELLOW,LGRAYBLUE);
+//			Display_GB2312_String(46,170,24, "æ­£åœ¨æµ‹è¯•äº§å“ï¼ï¼ï¼",YELLOW,LGRAYBLUE);
 			nLED_Link(Bit_RESET);	
 			nVCC_EN(Bit_RESET);
-			//´òÓ¡Ç°²âÊÔÄÚÈİ		
-  			// TM_Test();															//¼ÓÈÈÆ¬ÎÂ¶È²âÊÔ
-			// RAY_Test();														//ºìÍâ¹âñî²âÊÔ
-			// VH_Test();															//VH²âÊÔ
-			// MT_Test();															//µç»úµç¸Ğ²âÊÔ 
-			// Cap_Test(ENABLE);													//µçÈİ²âÊÔ
-			//if(LCD_Testout()!=0x11){goto Retest;}								//²âÊÔµÄ½á¹ûÅĞ¶Ï²¢LCDÊä³ö
-			//²âÊÔÍê±Ï***
+			//æ‰“å°å‰æµ‹è¯•å†…å®¹		
+  			// TM_Test();															//åŠ çƒ­ç‰‡æ¸©åº¦æµ‹è¯•
+			// RAY_Test();														//çº¢å¤–å…‰è€¦æµ‹è¯•
+			// VH_Test();															//VHæµ‹è¯•
+			// MT_Test();															//ç”µæœºç”µæ„Ÿæµ‹è¯• 
+			// Cap_Test(ENABLE);													//ç”µå®¹æµ‹è¯•
+			//if(LCD_Testout()!=0x11){goto Retest;}								//æµ‹è¯•çš„ç»“æœåˆ¤æ–­å¹¶LCDè¾“å‡º
+			//æµ‹è¯•å®Œæ¯•***
 			#if !RUN
 			u8 step_sequence[8] = {0x05,0x01,0x09,0x08,0x0a,0x02,0x06,0x04}; 
 			u8 i;
 			VH_EN(Bit_SET);
 			MotoStep(0x00);
-			for(i = 0; i < 100; i++)   // ×ª¶¯100²½
+			for(i = 0; i < 100; i++)   // è½¬åŠ¨100æ­¥
 			{
-				MotoStep(step_sequence[i % 8]);  // Ñ­»·Ö´ĞĞ8²½ĞòÁĞ
+				MotoStep(step_sequence[i % 8]);  // å¾ªç¯æ‰§è¡Œ8æ­¥åºåˆ—
 				// FeedNDotLine(2);
-				Delay1ms(1);  // ¿ØÖÆ×ªËÙ
+				Delay1ms(1);  // æ§åˆ¶è½¬é€Ÿ
 			}
 			MotoStep(0x00);
 			VH_EN(Bit_RESET);
 			#endif
-			// TPH_Printinit();						//´òÓ¡Ç° TPH³õÊ¼»¯
+			// TPH_Printinit();						//æ‰“å°å‰ TPHåˆå§‹åŒ–
 
-			// while (PAPER_Key == Bit_SET && R_Flag == 1)		//µÈ´ı°´¼ü
+			// while (PAPER_Key == Bit_SET && R_Flag == 1)		//ç­‰å¾…æŒ‰é”®
 			// {
 			// 	for(lps=64;lps>0;lps--)
 			// 	{
 			// 		TPH_Loop1();
 			// 	}	
 			// 	TPH_PrintString(0,"                      ",24);
-			// 	TPH_PrintString(0, R_Buff, 24); //´òÓ¡½ÓÊÕµ½µÄ×Ö·û´®
+			// 	TPH_PrintString(0, R_Buff, 24); //æ‰“å°æ¥æ”¶åˆ°çš„å­—ç¬¦ä¸²
 			// 	TPH_PrintString(0,"                      ",24);
 			// 	TPH_PrintString(0," \\\\\\\\\\| ",24);
 			// 	TPH_PrintString(0,"                      ",24);
-			// 	R_Flag = 0; // ÖØÖÃ±êÖ¾Î»
+			// 	R_Flag = 0; // é‡ç½®æ ‡å¿—ä½
 			// 	R_Buff[0] = '\0';
-			// } TPH_Esc(); //½áÊø´òÓ¡
+			// } TPH_Esc(); //ç»“æŸæ‰“å°
 			// nVCC_EN(Bit_SET);
 			// for (int i = 0; i < 100; i++)
 			// MotoOneStep();
@@ -123,19 +123,19 @@ Retest:
 			ls=0;
 			while(PAPER_Key	!=	Bit_SET		||	ls	==	0 )
 			{
-				if(It_Num>5000)													//Ã¿X00ms ¼ì²âÒ»´ÎHPTÎÂ¶ÈºÍ¹âñîÈ¡Öµ
+				if(It_Num>5000)													//æ¯X00ms æ£€æµ‹ä¸€æ¬¡HPTæ¸©åº¦å’Œå…‰è€¦å–å€¼
 				{
 					It_Num=0;
-					if(TM_Test()!=0x11) //ÅĞ¶ÏÎÂ¶È·¶Î§
+					if(TM_Test()!=0x11) //åˆ¤æ–­æ¸©åº¦èŒƒå›´
 						{
 							nVCC_EN(Bit_SET);
 							Display_Arial_String(232,118,16, "OFF",RED,LGRAYBLUE);  
 							LCD_DataClear();
 							goto Retest;
 						}
-					RAY_Test();															//ºìÍâ¹âñî²âÊÔ
+					RAY_Test();															//çº¢å¤–å…‰è€¦æµ‹è¯•
 					LCD_Variable();	
-					if(Detect_USART[5]	==	0x11)				//¹âñî¼«ÏŞÖµ¼ì²â
+					if(Detect_USART[5]	==	0x11)				//å…‰è€¦æé™å€¼æ£€æµ‹
 						{
 								ls	= 1;
 						}	
@@ -143,7 +143,7 @@ Retest:
 				}
 			
 			/*******************************
-			´òÓ¡µÄÄÚÈİ
+			æ‰“å°çš„å†…å®¹
 			********************************/
 			memset(TPH_Cache[0],'\0', sizeof(TPH_Cache[0]));
 			strcpy(TPH_Cache[0],"VH_Test:  ");
@@ -166,9 +166,9 @@ Retest:
 			strcpy(TPH_Cache[7],"TM_Test:  ");
 			ShowNum(strlen(TPH_Cache[7]),7,(Detect_USART[2]),3,'~','C');	
 			// strcpy(TPH_Cache[8],"this is a test");
-			TPH_Printinit();						//´òÓ¡Ç° TPH³õÊ¼»¯
+			TPH_Printinit();						//æ‰“å°å‰ TPHåˆå§‹åŒ–
 
-			while (PAPER_Key == Bit_SET && R_Flag == 1)		//µÈ´ı°´¼ü
+			while (PAPER_Key == Bit_SET && R_Flag == 1)		//ç­‰å¾…æŒ‰é”®
 			{
 				TPH_PrintString(0,"hello",24);
 				for(lps=64;lps>0;lps--)
@@ -176,17 +176,17 @@ Retest:
 					TPH_Loop1();
 				}	
 				TPH_PrintString(0,"                      ",24);
-				TPH_PrintString(0, R_Buff, 24); //´òÓ¡½ÓÊÕµ½µÄ×Ö·û´®
+				TPH_PrintString(0, R_Buff, 24); //æ‰“å°æ¥æ”¶åˆ°çš„å­—ç¬¦ä¸²
 				TPH_PrintString(0,"                      ",24);
 				TPH_PrintString(0," |||||||||| ",24);
 				TPH_PrintString(0,"                      ",24);
 				
-				// Load_Font_Config(); // ¼ÓÔØÍ¼Æ¬ÅäÖÃ
-				TPH_PrintImage_m2((const unsigned char *)P_Buff_Const,font_dim.height,font_dim.width); // ´òÓ¡Í¼Ïñ,´Ó´®¿Ú»ñÈ¡×ÖÄ£
-				// TPH_PrintImage_m2((const unsigned char *)P_Buff_Const,MY_FONT_ROWS,MY_FONT_COLS); // ´òÓ¡Í¼Ïñ,´ÓÎÄ¼ş»ñÈ¡×ÖÄ£
-				// TPH_PrintImage_m2((const unsigned char *)my_font,MY_FONT_ROWS,MY_FONT_COLS); // ´òÓ¡Í¼Ïñ,´ÓÎÄ¼ş»ñÈ¡×ÖÄ£
+				// Load_Font_Config(); // åŠ è½½å›¾ç‰‡é…ç½®
+				// TPH_PrintImage_m2((const unsigned char *)P_Buff_Const,font_dim.height,font_dim.width); // æ‰“å°å›¾åƒ,ä»ä¸²å£è·å–å­—æ¨¡
+				TPH_PrintImage_m2((const unsigned char *)P_Buff_Const,MY_FONT_ROWS,MY_FONT_COLS); // æ‰“å°å›¾åƒ,ä»æ–‡ä»¶è·å–å­—æ¨¡
+				// TPH_PrintImage_m2((const unsigned char *)my_font,MY_FONT_ROWS,MY_FONT_COLS); // æ‰“å°å›¾åƒ,ä»æ–‡ä»¶è·å–å­—æ¨¡
 				
-				R_Flag = 0; // ÖØÖÃ±êÖ¾Î»
+				R_Flag = 0; // é‡ç½®æ ‡å¿—ä½
 				memset(P_Buff_Const[0], '\0', sizeof(P_Buff_Const[0]));
 			} 
 			// MT_SW(Bit_RESET);	
@@ -196,7 +196,7 @@ Retest:
 
 			// do
 			// 	{	
-			// 		//STBºÚ¿é´òÓ¡
+			// 		//STBé»‘å—æ‰“å°
 			// /*		for(lps=48;lps>0;lps--)
 			// 		{
 			// 			TPH_Loop0();
@@ -222,7 +222,7 @@ Retest:
 			// 	//	TPH_PrintString(0,"                        ",16);			
 
 			// 		TPH_ShowPicture();
-			// 		//ÄÚÈİ´òÓ¡
+			// 		//å†…å®¹æ‰“å°
 			// 		TPH_PrintString(0,"                      ",24);
 			// 		TPH_PrintString(16,TPH_Cache[0],24);
 			// 		TPH_PrintString(16,TPH_Cache[1],24);
@@ -250,19 +250,19 @@ Retest:
 			// 		TPH_LAN_TEST=0;
 			// }while(PAPER_Key==Bit_SET);
 			TPH_Esc();
-			Display_GB2312_String(92,160,24, "´òÓ¡Íê±Ï",DARKBLUE,LGRAYBLUE);
-			while(Key1()	==	Bit_SET)		//¼ì²â°´¼ü»òÕß²âÊÔ²úÆ·Àë¿ªºóÌø³ö
+			Display_GB2312_String(92,160,24, "æ‰“å°å®Œæ¯•",DARKBLUE,LGRAYBLUE);
+			while(Key1()	==	Bit_SET)		//æ£€æµ‹æŒ‰é”®æˆ–è€…æµ‹è¯•äº§å“ç¦»å¼€åè·³å‡º
 			{
-				if(It_Num>2500)						//Ã¿500ms ¼ì²âÒ»´ÎHPTÎÂ¶ÈºÍ¹âñîÈ¡Öµ
+				if(It_Num>2500)						//æ¯500ms æ£€æµ‹ä¸€æ¬¡HPTæ¸©åº¦å’Œå…‰è€¦å–å€¼
 				{
 					It_Num=0;
-					TM_Test();															//ÈÈÃôÆ¬ÎÂ¶È²âÊÔ
-					RAY_Test();															//ºìÍâ¹âñî²âÊÔ
+					TM_Test();															//çƒ­æ•ç‰‡æ¸©åº¦æµ‹è¯•
+					RAY_Test();															//çº¢å¤–å…‰è€¦æµ‹è¯•
 //					LCD_Variable();	
 				}
 			}
 			nVCC_EN(Bit_SET);
-//			Display_Arial_String(232,118,16, "OFF",RED,LGRAYBLUE);   		//ASC 12x16µãÕó(ArialÀàĞÍ)
+//			Display_Arial_String(232,118,16, "OFF",RED,LGRAYBLUE);   		//ASC 12x16ç‚¹é˜µ(Arialç±»å‹)
 //			LCD_DataClear();
 			#endif
 		}
@@ -273,12 +273,12 @@ Retest:
 
 
 /******************************************************************************
-*º¯ÊıËµÃ÷£ºTPHÌí¼ÓÍ¬Ò»ĞĞ±äÁ¿
-*Èë¿ÚÊı¾İ£ºd£ºÍ·²¿Êı¾İ 
-					 num£ºÌí¼ÓµÄ±äÁ¿
-					 len£º±£Áô±äÁ¿µÄÎ»Êı
-					 n,c£ºÌí¼ÓµÄºó×º
-*·µ»ØÖµ£º  ÎŞ
+*å‡½æ•°è¯´æ˜ï¼šTPHæ·»åŠ åŒä¸€è¡Œå˜é‡
+*å…¥å£æ•°æ®ï¼šdï¼šå¤´éƒ¨æ•°æ® 
+					 numï¼šæ·»åŠ çš„å˜é‡
+					 lenï¼šä¿ç•™å˜é‡çš„ä½æ•°
+					 n,cï¼šæ·»åŠ çš„åç¼€
+*è¿”å›å€¼ï¼š  æ— 
 *******************************************************************************/
 void ShowNum(u8 d,u8 s,u16 num,u8 len,u8 n,u8 c)
 {         	
@@ -309,9 +309,9 @@ void ShowNum(u8 d,u8 s,u16 num,u8 len,u8 n,u8 c)
 
 
 /******************************************************************************
-*º¯ÊıËµÃ÷£ºm^n
-*Èë¿ÚÊı¾İ£ºm:µ×Êı n:Ö¸Êı
-*·µ»ØÖµ£º  result
+*å‡½æ•°è¯´æ˜ï¼šm^n
+*å…¥å£æ•°æ®ï¼šm:åº•æ•° n:æŒ‡æ•°
+*è¿”å›å€¼ï¼š  result
 ******************************************************************************/
 // u32 num_pow(u8 m,u8 n)
 // {
@@ -320,7 +320,7 @@ void ShowNum(u8 d,u8 s,u16 num,u8 len,u8 n,u8 c)
 // 	return result;
 // }
 
-//¿ìËÙÃİ
+//å¿«é€Ÿå¹‚
 u32 num_pow(u8 m,u8 n)
 {
     u32 result = 1;
@@ -338,9 +338,9 @@ u32 num_pow(u8 m,u8 n)
 
 
 /******************************************************************************
-*º¯ÊıËµÃ÷£ºTPH´òÓ¡Í¼Æ¬¸üĞÂx'y
-*Èë¿ÚÊı¾İ£ºÎŞ
-*·µ»ØÖµ£º  ÎŞ
+*å‡½æ•°è¯´æ˜ï¼šTPHæ‰“å°å›¾ç‰‡æ›´æ–°x'y
+*å…¥å£æ•°æ®ï¼šæ— 
+*è¿”å›å€¼ï¼š  æ— 
 ******************************************************************************/
 // void Load_Font_Config() {
 //     FIL file;
