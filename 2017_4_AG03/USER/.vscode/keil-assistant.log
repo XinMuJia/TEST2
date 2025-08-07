@@ -1,0 +1,137 @@
+[info] Log at : 2025/7/25|09:12:57|GMT+0800
+
+[info] Log at : 2025/7/25|11:11:42|GMT+0800
+
+[info] Log at : 2025/7/25|14:08:30|GMT+0800
+
+[info] Log at : 2025/7/25|16:25:22|GMT+0800
+
+[info] Log at : 2025/7/25|16:38:25|GMT+0800
+
+[info] Log at : 2025/7/25|16:39:32|GMT+0800
+
+[info] Log at : 2025/7/28|01:06:28|GMT+0800
+
+[info] Log at : 2025/7/28|01:10:38|GMT+0800
+
+[info] Log at : 2025/7/28|01:12:24|GMT+0800
+
+[info] Log at : 2025/7/28|01:14:50|GMT+0800
+
+[info] Log at : 2025/7/28|01:15:12|GMT+0800
+
+[info] Log at : 2025/7/28|01:16:07|GMT+0800
+
+[info] Log at : 2025/7/28|01:16:29|GMT+0800
+
+[info] Log at : 2025/7/28|01:16:44|GMT+0800
+
+[info] Log at : 2025/7/28|01:18:21|GMT+0800
+
+[info] Log at : 2025/7/28|01:18:35|GMT+0800
+
+[info] Log at : 2025/7/28|01:20:22|GMT+0800
+
+[info] Log at : 2025/7/28|01:21:49|GMT+0800
+
+[info] Log at : 2025/7/28|01:22:29|GMT+0800
+
+[info] Log at : 2025/7/28|01:22:43|GMT+0800
+
+[info] Log at : 2025/7/28|01:23:44|GMT+0800
+
+[info] Log at : 2025/7/28|01:24:11|GMT+0800
+
+[info] Log at : 2025/7/28|01:25:13|GMT+0800
+
+[info] Log at : 2025/7/28|01:25:42|GMT+0800
+
+[info] Log at : 2025/7/28|01:26:47|GMT+0800
+
+[info] Log at : 2025/7/28|01:27:27|GMT+0800
+
+[info] Log at : 2025/7/28|01:27:47|GMT+0800
+
+[info] Log at : 2025/7/28|01:28:59|GMT+0800
+
+[info] Log at : 2025/7/28|01:29:29|GMT+0800
+
+[info] Log at : 2025/7/28|01:30:09|GMT+0800
+
+[info] Log at : 2025/7/28|01:30:28|GMT+0800
+
+[info] Log at : 2025/7/28|01:32:28|GMT+0800
+
+[info] Log at : 2025/7/28|01:35:24|GMT+0800
+
+[info] Log at : 2025/7/28|01:35:58|GMT+0800
+
+[info] Log at : 2025/7/28|01:37:29|GMT+0800
+
+[info] Log at : 2025/7/28|01:38:07|GMT+0800
+
+[info] Log at : 2025/7/28|01:38:49|GMT+0800
+
+[info] Log at : 2025/7/28|01:39:03|GMT+0800
+
+[info] Log at : 2025/7/28|01:39:19|GMT+0800
+
+[info] Log at : 2025/7/28|08:47:31|GMT+0800
+
+[info] Log at : 2025/7/28|14:35:39|GMT+0800
+
+[info] Log at : 2025/7/29|13:20:28|GMT+0800
+
+[info] Log at : 2025/7/29|17:31:03|GMT+0800
+
+[info] Log at : 2025/7/30|10:53:33|GMT+0800
+
+[info] Log at : 2025/7/30|10:53:57|GMT+0800
+
+[info] Log at : 2025/7/31|07:50:23|GMT+0800
+
+[info] Log at : 2025/7/31|08:17:23|GMT+0800
+
+[info] Log at : 2025/7/31|08:23:13|GMT+0800
+
+[info] Log at : 2025/7/31|08:32:27|GMT+0800
+
+[info] Log at : 2025/7/31|09:19:50|GMT+0800
+
+[info] Log at : 2025/7/31|09:24:45|GMT+0800
+
+[info] Log at : 2025/7/31|09:34:49|GMT+0800
+
+[info] Log at : 2025/7/31|09:35:13|GMT+0800
+
+[info] Log at : 2025/8/1|17:55:32|GMT+0800
+
+[info] Log at : 2025/8/4|07:52:11|GMT+0800
+
+[info] Log at : 2025/8/4|09:17:30|GMT+0800
+
+[info] Log at : 2025/8/4|15:59:29|GMT+0800
+
+[info] Log at : 2025/8/5|07:55:45|GMT+0800
+
+[info] Log at : 2025/8/5|15:41:44|GMT+0800
+
+[info] Log at : 2025/8/5|15:47:36|GMT+0800
+
+[info] Log at : 2025/8/5|15:57:33|GMT+0800
+
+SyntaxError: Expected ',' or ']' after array element in JSON at position 1483 (line 20 column 17)
+    at JSON.parse (<anonymous>)
+    at F.updateCppProperties (c:\Users\13775\.vscode\extensions\cl.keil-assistant-1.7.0\dist\extension.js:1:10849)
+    at F.<anonymous> (c:\Users\13775\.vscode\extensions\cl.keil-assistant-1.7.0\dist\extension.js:1:12579)
+    at Generator.next (<anonymous>)
+    at c:\Users\13775\.vscode\extensions\cl.keil-assistant-1.7.0\dist\extension.js:1:4480
+    at new Promise (<anonymous>)
+    at r (c:\Users\13775\.vscode\extensions\cl.keil-assistant-1.7.0\dist\extension.js:1:4225)
+    at F.load (c:\Users\13775\.vscode\extensions\cl.keil-assistant-1.7.0\dist\extension.js:1:11310)
+    at w.<anonymous> (c:\Users\13775\.vscode\extensions\cl.keil-assistant-1.7.0\dist\extension.js:1:8737)
+    at Generator.next (<anonymous>)
+    at a (c:\Users\13775\.vscode\extensions\cl.keil-assistant-1.7.0\dist\extension.js:1:4282)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)
+[info] Log at : 2025/8/6|13:03:38|GMT+0800
+

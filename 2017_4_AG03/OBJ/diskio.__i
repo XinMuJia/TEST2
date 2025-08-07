@@ -1,0 +1,6 @@
+--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\USER -I ..\CMSIS -I ..\CMSIS\inc -I ..\StartUp -I ..\App\Arr_C_M -I .\Main -I ..\App\Detection -I ..\App\Extra -I ..\App\it -I ..\App\OLED -I ..\App\Start -I ..\CMSIS -I ..\App\USART -I ..\App\TPG -I ..\FATFS
+-I.\RTE\_Targets
+-ID:\Engineering_software\Keil_v5\ARM\PACK\GigaDevice\GD32F10x_DFP\2.0.3\Device\Include
+-ID:\Engineering_software\Keil_v5\ARM\CMSIS\Include
+-D__UVISION_VERSION="524" -DGD32F10X_MD -DUSE_STDPERIPH_DRIVER -DUSE_STDPERIPH_DRIVER -DSTM32F10X_XL
+-o ..\obj\diskio.o --omf_browse ..\obj\diskio.crf --depend ..\obj\diskio.d "..\FATFS\diskio.c"
