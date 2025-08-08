@@ -5,7 +5,11 @@
   "srcDirs": [],
   "virtualFolder": {
     "name": "<virtual_root>",
-    "files": [],
+    "files": [
+      {
+        "path": "../App/TPG/TPG.c"
+      }
+    ],
     "folders": [
       {
         "name": "App",
@@ -51,6 +55,15 @@
           },
           {
             "path": "../App/Arr_C_M/Cap.c"
+          },
+          {
+            "path": "../App/TPG/TGP_Pic.c"
+          },
+          {
+            "path": "../App/TPG/my_font.c"
+          },
+          {
+            "path": "../App/TPG/my_font.h"
           }
         ],
         "folders": []
@@ -167,7 +180,10 @@
   },
   "targets": {
     "Targets": {
-      "excludeList": [],
+      "excludeList": [
+        "<virtual_root>/App/font_data.c",
+        "../FATFS/w25qxx.c"
+      ],
       "toolchain": "AC5",
       "compileConfig": {
         "cpuType": "Cortex-M3",
@@ -311,10 +327,7 @@
           "../App/OLED",
           "../App/Start",
           "../App/USART",
-          "../App/TPG",
-          "../FATFS",
-          ".cmsis/include",
-          "RTE/_Targets"
+          "../App/TPG"
         ],
         "libList": [],
         "defineList": [
@@ -341,9 +354,6 @@
           },
           "asm-compiler": {},
           "linker": {
-            "$outputTaskExcludes": [
-              ".bin"
-            ],
             "output-format": "elf",
             "xo-base": "",
             "ro-base": "0x08000000",

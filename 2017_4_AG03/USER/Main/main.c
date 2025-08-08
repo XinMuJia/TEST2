@@ -1,14 +1,14 @@
 /**********************************************
-*Ã¿ï¿½ï¿½ï¿½ï¿½Â¼ï¿½Þ¸Ä³ï¿½ï¿½ï¿½ï¿½ï¿½
-*ProgID: ï¿½ï¿½Î»ï¿½ï¿½ï¿½ ï¿½ï¿½2001
-*2ï¿½Ç¹ï¿½ï¿½Ü±ï¿½ï¿½,001Îªï¿½ï¿½Ó¦ï¿½ï¿½ï¿½Ü²ï¿½Æ·ï¿½ï¿½ï¿½
-*Ëµï¿½ï¿½ï¿½ï¿½
-			1 ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô³ï¿½ï¿½ï¿½
-			2 ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
-			3	ï¿½ï¿½ï¿½ï¿½TPHï¿½ï¿½ï¿½Ô³ï¿½ï¿½ï¿½
-			4 Æ·ï¿½Ü³ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
-			5 Æ·ï¿½ï¿½TPHï¿½ï¿½ï¿½Ô³ï¿½ï¿½ï¿½
-			6	ï¿½ï¿½ï¿½ï¿½Î¬ï¿½Þ²ï¿½ï¿½Ô³ï¿½ï¿½ï¿½
+*Ã¿´ÎÉÕÂ¼ÐÞ¸Ä³ÌÐò±àºÅ
+*ProgID: ËÄÎ»±àºÅ Èç2001
+*2ÊÇ¹¦ÄÜ±àºÅ,001Îª¶ÔÓ¦¹¦ÄÜ²úÆ·±àºÅ
+*ËµÃ÷£º
+			1 ¼¼Êõ²âÊÔ³ÌÐò
+			2 Éú²ú³ö³§¼ìÑé³ÌÐò
+			3	Éú²úTPH²âÊÔ³ÌÐò
+			4 Æ·¹Ü³ö³§¼ìÑé³ÌÐò
+			5 Æ·¹ÜTPH²âÊÔ³ÌÐò
+			6	Éú²úÎ¬ÐÞ²âÊÔ³ÌÐò
 **********************************************/
 
 
@@ -30,22 +30,22 @@ void 	ShowNum(u8 d,u8 s,u16 num,u8 len,u8 n,u8 c);
 void Load_Font_Config();
 u32 	num_pow(u8 m,u8 n);
 
-extern	u32					Cap_USART[2];								//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Â·ï¿½ï¿½ï¿½ï¿½
-extern	u16					Detect_USART[];								//VH,TM,RAYï¿½ï¿½ï¿½ï¿½
-extern	u16					MT_USART[];									//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô½ï¿½ï¿½
-extern 	u16 				UpStartUSART[];								//Ñ¡ï¿½ï¿½ï¿½ÍºÅ²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
-extern	BitAction		STB_ON,STB_OFF;									//ï¿½ï¿½Ö½ï¿½Åºï¿½
+extern	u32					Cap_USART[2];								//¹âñîÅÔÂ·µçÈÝ
+extern	u16					Detect_USART[];								//VH,TM,RAY²âÊÔ
+extern	u16					MT_USART[];									//µç»ú²âÊÔ½á¹û
+extern 	u16 				UpStartUSART[];								//Ñ¡ÔñÐÍºÅ²ÎÊýÉèÖÃ
+extern	BitAction		STB_ON,STB_OFF;									//ÓÐÖ½ÐÅºÅ
 extern 	char				*Type_ID;
 extern	u16					It_Num;
-extern	u8					Link_G_en;									//ï¿½Ç·ï¿½ï¿½ï¿½ï¿½Í·Æ¬ï¿½Óµï¿½
+extern	u8					Link_G_en;									//ÊÇ·ñ²âÊÔÍ·Æ¬½ÓµØ
 extern	u8					Print_Minloopnum;
 extern	u8					TPH_STB_EN;
 extern FunctionalState  MOTO_H_Set;
 extern char R_Buff[30], R_n, R_Flag,P_n;
-extern u8 P_Buff_Const[300][48]; // ï¿½ï¿½Ó¡Í¼ï¿½ï¿½Ä³ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+extern u8 P_Buff_Const[300][48]; // ´òÓ¡Í¼ÏñµÄ³£Á¿Êý×é
 extern volatile FontDimension font_dim;
 
-u16					ADC_Num[3];										//ADCï¿½ï¿½ï¿½ï¿½
+u16					ADC_Num[3];										//ADC»º´æ
 BitAction		PAPER_Key;
 char 				TPH_Cache[10][24];
 u8 					TPH_LAN_TEST;
@@ -55,65 +55,65 @@ int main(void)
 {
 	u8	ls;
 	u8	lps;
-	InitHardWare();													//MCUï¿½ï¿½ï¿½ï¿½ï¿½Ê¼ï¿½ï¿½
+	InitHardWare();													//MCUÍâÉè³õÊ¼»¯
 	if(Key1()	!=	Bit_RESET)
 	{
 		MOTO_H_Set=ENABLE;
 	}	
 	MOTO_HzGet();
-	UpStart();														//ï¿½ï¿½ï¿½Ã»ï¿½Ð¾ï¿½ï¿½Ê¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
-	//LCD_Init();													//LCDï¿½ï¿½Ê¼ï¿½ï¿½
-	//LCD_Layout();													//LCDï¿½ï¿½Ê¾ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+	UpStart();														//ÉèÖÃ»úÐ¾³õÊ¼»¯²ÎÊý
+	//LCD_Init();													//LCD³õÊ¼»¯
+	//LCD_Layout();													//LCDÏÔÊ¾±³¾°²¼¾Ö
 	Cap_Test(DISABLE);	
-	nLED_FRONT(Bit_RESET);											//ï¿½ï¿½Ê¼ï¿½ï¿½ï¿½ï¿½ï¿½Ö¸Ê¾ï¿½ï¿½
+	nLED_FRONT(Bit_RESET);											//³õÊ¼»¯Íê³ÉÖ¸Ê¾µÆ
 	while(1)
 	{
 Retest:		
-		// if(Key1()	!=	Bit_RESET)							//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+		// if(Key1()	!=	Bit_RESET)							//°´¼ü²âÊÔ
 		if(1)
 		{
 //			Display_Arial_String(232,118,16, "ON ",DARKBLUE,LGRAYBLUE);
-//			Display_GB2312_String(46,170,24, "ï¿½ï¿½ï¿½Ú²ï¿½ï¿½Ô²ï¿½Æ·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½",YELLOW,LGRAYBLUE);
+//			Display_GB2312_String(46,170,24, "ÕýÔÚ²âÊÔ²úÆ·£®£®£®",YELLOW,LGRAYBLUE);
 			nLED_Link(Bit_RESET);	
 			nVCC_EN(Bit_RESET);
-			//ï¿½ï¿½Ó¡Ç°ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½		
-  			// TM_Test();															//ï¿½ï¿½ï¿½ï¿½Æ¬ï¿½Â¶È²ï¿½ï¿½ï¿½
-			// RAY_Test();														//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
-			// VH_Test();															//VHï¿½ï¿½ï¿½ï¿½
-			// MT_Test();															//ï¿½ï¿½ï¿½ï¿½ï¿½Ð²ï¿½ï¿½ï¿½ 
-			// Cap_Test(ENABLE);													//ï¿½ï¿½ï¿½Ý²ï¿½ï¿½ï¿½
-			//if(LCD_Testout()!=0x11){goto Retest;}								//ï¿½ï¿½ï¿½ÔµÄ½ï¿½ï¿½ï¿½Ð¶Ï²ï¿½LCDï¿½ï¿½ï¿½
-			//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½***
+			//´òÓ¡Ç°²âÊÔÄÚÈÝ		
+  			// TM_Test();															//¼ÓÈÈÆ¬ÎÂ¶È²âÊÔ
+			// RAY_Test();														//ºìÍâ¹âñî²âÊÔ
+			// VH_Test();															//VH²âÊÔ
+			// MT_Test();															//µç»úµç¸Ð²âÊÔ 
+			// Cap_Test(ENABLE);													//µçÈÝ²âÊÔ
+			//if(LCD_Testout()!=0x11){goto Retest;}								//²âÊÔµÄ½á¹ûÅÐ¶Ï²¢LCDÊä³ö
+			//²âÊÔÍê±Ï***
 			#if !RUN
 			u8 step_sequence[8] = {0x05,0x01,0x09,0x08,0x0a,0x02,0x06,0x04}; 
 			u8 i;
 			VH_EN(Bit_SET);
 			MotoStep(0x00);
-			for(i = 0; i < 100; i++)   // ×ªï¿½ï¿½100ï¿½ï¿½
+			for(i = 0; i < 100; i++)   // ×ª¶¯100²½
 			{
-				MotoStep(step_sequence[i % 8]);  // Ñ­ï¿½ï¿½Ö´ï¿½ï¿½8ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+				MotoStep(step_sequence[i % 8]);  // Ñ­»·Ö´ÐÐ8²½ÐòÁÐ
 				// FeedNDotLine(2);
-				Delay1ms(1);  // ï¿½ï¿½ï¿½ï¿½×ªï¿½ï¿½
+				Delay1ms(1);  // ¿ØÖÆ×ªËÙ
 			}
 			MotoStep(0x00);
 			VH_EN(Bit_RESET);
 			#endif
-			// TPH_Printinit();						//ï¿½ï¿½Ó¡Ç° TPHï¿½ï¿½Ê¼ï¿½ï¿½
+			// TPH_Printinit();						//´òÓ¡Ç° TPH³õÊ¼»¯
 
-			// while (PAPER_Key == Bit_SET && R_Flag == 1)		//ï¿½È´ï¿½ï¿½ï¿½ï¿½ï¿½
+			// while (PAPER_Key == Bit_SET && R_Flag == 1)		//µÈ´ý°´¼ü
 			// {
 			// 	for(lps=64;lps>0;lps--)
 			// 	{
 			// 		TPH_Loop1();
 			// 	}	
 			// 	TPH_PrintString(0,"                      ",24);
-			// 	TPH_PrintString(0, R_Buff, 24); //ï¿½ï¿½Ó¡ï¿½ï¿½ï¿½Õµï¿½ï¿½ï¿½ï¿½Ö·ï¿½ï¿½ï¿½
+			// 	TPH_PrintString(0, R_Buff, 24); //´òÓ¡½ÓÊÕµ½µÄ×Ö·û´®
 			// 	TPH_PrintString(0,"                      ",24);
 			// 	TPH_PrintString(0," \\\\\\\\\\| ",24);
 			// 	TPH_PrintString(0,"                      ",24);
-			// 	R_Flag = 0; // ï¿½ï¿½ï¿½Ã±ï¿½Ö¾Î»
+			// 	R_Flag = 0; // ÖØÖÃ±êÖ¾Î»
 			// 	R_Buff[0] = '\0';
-			// } TPH_Esc(); //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ó¡
+			// } TPH_Esc(); //½áÊø´òÓ¡
 			// nVCC_EN(Bit_SET);
 			// for (int i = 0; i < 100; i++)
 			// MotoOneStep();
@@ -123,19 +123,19 @@ Retest:
 			ls=0;
 			while(PAPER_Key	!=	Bit_SET		||	ls	==	0 )
 			{
-				if(It_Num>5000)													//Ã¿X00ms ï¿½ï¿½ï¿½Ò»ï¿½ï¿½HPTï¿½Â¶ÈºÍ¹ï¿½ï¿½ï¿½È¡Öµ
+				if(It_Num>5000)													//Ã¿X00ms ¼ì²âÒ»´ÎHPTÎÂ¶ÈºÍ¹âñîÈ¡Öµ
 				{
 					It_Num=0;
-					if(TM_Test()!=0x11) //ï¿½Ð¶ï¿½ï¿½Â¶È·ï¿½Î§
+					if(TM_Test()!=0x11) //ÅÐ¶ÏÎÂ¶È·¶Î§
 						{
 							nVCC_EN(Bit_SET);
 							Display_Arial_String(232,118,16, "OFF",RED,LGRAYBLUE);  
 							LCD_DataClear();
 							goto Retest;
 						}
-					RAY_Test();															//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+					RAY_Test();															//ºìÍâ¹âñî²âÊÔ
 					LCD_Variable();	
-					if(Detect_USART[5]	==	0x11)				//ï¿½ï¿½ï¿½î¼«ï¿½ï¿½Öµï¿½ï¿½ï¿½
+					if(Detect_USART[5]	==	0x11)				//¹âñî¼«ÏÞÖµ¼ì²â
 						{
 								ls	= 1;
 						}	
@@ -143,7 +143,7 @@ Retest:
 				}
 			
 			/*******************************
-			ï¿½ï¿½Ó¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+			´òÓ¡µÄÄÚÈÝ
 			********************************/
 			memset(TPH_Cache[0],'\0', sizeof(TPH_Cache[0]));
 			strcpy(TPH_Cache[0],"VH_Test:  ");
@@ -166,27 +166,27 @@ Retest:
 			strcpy(TPH_Cache[7],"TM_Test:  ");
 			ShowNum(strlen(TPH_Cache[7]),7,(Detect_USART[2]),3,'~','C');	
 			// strcpy(TPH_Cache[8],"this is a test");
-			TPH_Printinit();						//ï¿½ï¿½Ó¡Ç° TPHï¿½ï¿½Ê¼ï¿½ï¿½
+			TPH_Printinit();						//´òÓ¡Ç° TPH³õÊ¼»¯
 
-			while (PAPER_Key == Bit_SET && R_Flag == 1)		//ï¿½È´ï¿½ï¿½ï¿½ï¿½ï¿½
+			while (PAPER_Key == Bit_SET && R_Flag == 1)		//µÈ´ý°´¼ü
 			{
 				TPH_PrintString(0,"hello",24);
 				for(lps=64;lps>0;lps--)
 				{
 					TPH_Loop1();
 				}	
-				// TPH_PrintString(0,"                      ",24);
-				// TPH_PrintString(0, R_Buff, 24); //ï¿½ï¿½Ó¡ï¿½ï¿½ï¿½Õµï¿½ï¿½ï¿½ï¿½Ö·ï¿½ï¿½ï¿½
-				// TPH_PrintString(0,"                      ",24);
-				// TPH_PrintString(0," |||||||||| ",24);
-				// TPH_PrintString(0,"                      ",24);
+				TPH_PrintString(0,"                      ",24);
+				TPH_PrintString(0, R_Buff, 24); //´òÓ¡½ÓÊÕµ½µÄ×Ö·û´®
+				TPH_PrintString(0,"                      ",24);
+				TPH_PrintString(0," |||||||||| ",24);
+				TPH_PrintString(0,"                      ",24);
 				
-				// Load_Font_Config(); // ï¿½ï¿½ï¿½ï¿½Í¼Æ¬ï¿½ï¿½ï¿½ï¿½
-				TPH_PrintImage_m2((const unsigned char *)P_Buff_Const,font_dim.height,font_dim.width); // ï¿½ï¿½Ó¡Í¼ï¿½ï¿½,ï¿½Ó´ï¿½ï¿½Ú»ï¿½È¡ï¿½ï¿½Ä£
-				// TPH_PrintImage_m2((const unsigned char *)P_Buff_Const,MY_FONT_ROWS,MY_FONT_COLS); // ï¿½ï¿½Ó¡Í¼ï¿½ï¿½,ï¿½ï¿½ï¿½Ä¼ï¿½ï¿½ï¿½È¡ï¿½ï¿½Ä£
-				// TPH_PrintImage_m2((const unsigned char *)my_font,MY_FONT_ROWS,MY_FONT_COLS); // ï¿½ï¿½Ó¡Í¼ï¿½ï¿½,ï¿½ï¿½ï¿½Ä¼ï¿½ï¿½ï¿½È¡ï¿½ï¿½Ä£
+				// Load_Font_Config(); // ¼ÓÔØÍ¼Æ¬ÅäÖÃ
+				TPH_PrintImage_m2((const unsigned char *)P_Buff_Const,font_dim.height,font_dim.width); // ´òÓ¡Í¼Ïñ,´Ó´®¿Ú»ñÈ¡×ÖÄ£
+				// TPH_PrintImage_m2((const unsigned char *)P_Buff_Const,MY_FONT_ROWS,MY_FONT_COLS); // ´òÓ¡Í¼Ïñ,´ÓÎÄ¼þ»ñÈ¡×ÖÄ£
+				// TPH_PrintImage_m2((const unsigned char *)my_font,MY_FONT_ROWS,MY_FONT_COLS); // ´òÓ¡Í¼Ïñ,´ÓÎÄ¼þ»ñÈ¡×ÖÄ£
 				
-				R_Flag = 0; // ï¿½ï¿½ï¿½Ã±ï¿½Ö¾Î»
+				R_Flag = 0; // ÖØÖÃ±êÖ¾Î»
 				memset(P_Buff_Const[0], '\0', sizeof(P_Buff_Const[0]));
 			} 
 			// MT_SW(Bit_RESET);	
@@ -196,7 +196,7 @@ Retest:
 
 			// do
 			// 	{	
-			// 		//STBï¿½Ú¿ï¿½ï¿½Ó¡
+			// 		//STBºÚ¿é´òÓ¡
 			// /*		for(lps=48;lps>0;lps--)
 			// 		{
 			// 			TPH_Loop0();
@@ -222,7 +222,7 @@ Retest:
 			// 	//	TPH_PrintString(0,"                        ",16);			
 
 			// 		TPH_ShowPicture();
-			// 		//ï¿½ï¿½ï¿½Ý´ï¿½Ó¡
+			// 		//ÄÚÈÝ´òÓ¡
 			// 		TPH_PrintString(0,"                      ",24);
 			// 		TPH_PrintString(16,TPH_Cache[0],24);
 			// 		TPH_PrintString(16,TPH_Cache[1],24);
@@ -250,19 +250,19 @@ Retest:
 			// 		TPH_LAN_TEST=0;
 			// }while(PAPER_Key==Bit_SET);
 			TPH_Esc();
-			Display_GB2312_String(92,160,24, "ï¿½ï¿½Ó¡ï¿½ï¿½ï¿½",DARKBLUE,LGRAYBLUE);
-			while(Key1()	==	Bit_SET)		//ï¿½ï¿½â°´ï¿½ï¿½ï¿½ï¿½ï¿½ß²ï¿½ï¿½Ô²ï¿½Æ·ï¿½ë¿ªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+			Display_GB2312_String(92,160,24, "´òÓ¡Íê±Ï",DARKBLUE,LGRAYBLUE);
+			while(Key1()	==	Bit_SET)		//¼ì²â°´¼ü»òÕß²âÊÔ²úÆ·Àë¿ªºóÌø³ö
 			{
-				if(It_Num>2500)						//Ã¿500ms ï¿½ï¿½ï¿½Ò»ï¿½ï¿½HPTï¿½Â¶ÈºÍ¹ï¿½ï¿½ï¿½È¡Öµ
+				if(It_Num>2500)						//Ã¿500ms ¼ì²âÒ»´ÎHPTÎÂ¶ÈºÍ¹âñîÈ¡Öµ
 				{
 					It_Num=0;
-					TM_Test();															//ï¿½ï¿½ï¿½ï¿½Æ¬ï¿½Â¶È²ï¿½ï¿½ï¿½
-					RAY_Test();															//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+					TM_Test();															//ÈÈÃôÆ¬ÎÂ¶È²âÊÔ
+					RAY_Test();															//ºìÍâ¹âñî²âÊÔ
 //					LCD_Variable();	
 				}
 			}
 			nVCC_EN(Bit_SET);
-//			Display_Arial_String(232,118,16, "OFF",RED,LGRAYBLUE);   		//ASC 12x16ï¿½ï¿½ï¿½ï¿½(Arialï¿½ï¿½ï¿½ï¿½)
+//			Display_Arial_String(232,118,16, "OFF",RED,LGRAYBLUE);   		//ASC 12x16µãÕó(ArialÀàÐÍ)
 //			LCD_DataClear();
 			#endif
 		}
@@ -273,12 +273,12 @@ Retest:
 
 
 /******************************************************************************
-*ï¿½ï¿½ï¿½ï¿½Ëµï¿½ï¿½ï¿½ï¿½TPHï¿½ï¿½ï¿½ï¿½Í¬Ò»ï¿½Ð±ï¿½ï¿½ï¿½
-*ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ý£ï¿½dï¿½ï¿½Í·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ 
-					 numï¿½ï¿½ï¿½ï¿½ï¿½ÓµÄ±ï¿½ï¿½ï¿½
-					 lenï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î»ï¿½ï¿½
-					 n,cï¿½ï¿½ï¿½ï¿½ï¿½ÓµÄºï¿½×º
-*ï¿½ï¿½ï¿½ï¿½Öµï¿½ï¿½  ï¿½ï¿½
+*º¯ÊýËµÃ÷£ºTPHÌí¼ÓÍ¬Ò»ÐÐ±äÁ¿
+*Èë¿ÚÊý¾Ý£ºd£ºÍ·²¿Êý¾Ý 
+					 num£ºÌí¼ÓµÄ±äÁ¿
+					 len£º±£Áô±äÁ¿µÄÎ»Êý
+					 n,c£ºÌí¼ÓµÄºó×º
+*·µ»ØÖµ£º  ÎÞ
 *******************************************************************************/
 void ShowNum(u8 d,u8 s,u16 num,u8 len,u8 n,u8 c)
 {         	
@@ -309,9 +309,9 @@ void ShowNum(u8 d,u8 s,u16 num,u8 len,u8 n,u8 c)
 
 
 /******************************************************************************
-*ï¿½ï¿½ï¿½ï¿½Ëµï¿½ï¿½ï¿½ï¿½m^n
-*ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ý£ï¿½m:ï¿½ï¿½ï¿½ï¿½ n:Ö¸ï¿½ï¿½
-*ï¿½ï¿½ï¿½ï¿½Öµï¿½ï¿½  result
+*º¯ÊýËµÃ÷£ºm^n
+*Èë¿ÚÊý¾Ý£ºm:µ×Êý n:Ö¸Êý
+*·µ»ØÖµ£º  result
 ******************************************************************************/
 // u32 num_pow(u8 m,u8 n)
 // {
@@ -320,7 +320,7 @@ void ShowNum(u8 d,u8 s,u16 num,u8 len,u8 n,u8 c)
 // 	return result;
 // }
 
-//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+//¿ìËÙÃÝ
 u32 num_pow(u8 m,u8 n)
 {
     u32 result = 1;
@@ -338,9 +338,9 @@ u32 num_pow(u8 m,u8 n)
 
 
 /******************************************************************************
-*ï¿½ï¿½ï¿½ï¿½Ëµï¿½ï¿½ï¿½ï¿½TPHï¿½ï¿½Ó¡Í¼Æ¬ï¿½ï¿½ï¿½ï¿½x'y
-*ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ý£ï¿½ï¿½ï¿½
-*ï¿½ï¿½ï¿½ï¿½Öµï¿½ï¿½  ï¿½ï¿½
+*º¯ÊýËµÃ÷£ºTPH´òÓ¡Í¼Æ¬¸üÐÂx'y
+*Èë¿ÚÊý¾Ý£ºÎÞ
+*·µ»ØÖµ£º  ÎÞ
 ******************************************************************************/
 // void Load_Font_Config() {
 //     FIL file;
